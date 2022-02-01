@@ -73,13 +73,13 @@ URLS = ['https://10.170.6.4:8765/nvue_v1/interface/lo/ip?rev=',
 'https://10.170.6.4:8765/nvue_v1/nve/vxlan?rev=',
 'https://10.170.6.4:8765/nvue_v1/router/bgp?rev=',
 'https://10.170.6.4:8765/nvue_v1/router/bgp?rev=',
-'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s?rev='% ips[cont_addr2],
-'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s?rev='% ips[cont_addr1],
+'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s?rev='% ips[cont_addr2][:-3],
+'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s?rev='% ips[cont_addr1][:-3],
 'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/address-family?rev=',
 'https://10.170.6.4:8765/nvue_v1/evpn?rev=',
 'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/address-family?rev=',
-'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s/address-family?rev='% ips[cont_addr2],
-'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s/address-family?rev='% ips[cont_addr1],]
+'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s/address-family?rev='% ips[cont_addr2][:-3],
+'https://10.170.6.4:8765/nvue_v1/vrf/default/router/bgp/neighbor/%s/address-family?rev='% ips[cont_addr1][:-3],]
 
 D = ["'{\"address\": {\"6.6.6.6/32\": {}}}'", "'{\"address\": {\"%s\": {}}}'"% ips[cont_addr1],"'{\"address\": {\"%s\": {}}}'"% ipv6s[randrange(0,len(ipv6s))]
     ,"'{\"address\": {\"%s\": {}}}'"% ips[randrange(0,len(ips))],"'{\"address\": {\"%s\": {}}}'"% ipv6s[randrange(0,len(ipv6s))]
